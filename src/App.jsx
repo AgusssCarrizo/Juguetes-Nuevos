@@ -18,7 +18,6 @@ function App() {
             <Selectores />
             <div className="flex flex-wrap gap-8 justify-center">
                <Productos />
-               <Productos />
             </div>
          </div>
          <div>
