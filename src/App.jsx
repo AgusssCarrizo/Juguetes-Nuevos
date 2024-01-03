@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Productos from "./components/Productos";
-import Selectores from "./components/selectores";
+import Selectores from "./components/Selectores";
 
 function App() {
    const [count, setCount] = useState(0);
