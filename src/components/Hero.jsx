@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="hero min-h-screen bg-red-800">
          <div className="hero-content max-w-5xl flex-col lg:flex-row-reverse glass shadow-md">
             <img
-               src="src/assets/img/TS4-hero.jpeg"
+               src="https://res.cloudinary.com/diotu9grj/image/upload/v1704406019/TS4-hero_xsx5bv.jpg"
                className="max-w-sm rounded-lg shadow-2xl"
             />
             <div>
