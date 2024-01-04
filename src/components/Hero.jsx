@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Hero() {
    return (
-      <div className="hero min-h-screen bg-roj-secondary ">
-         <div className="hero-content max-w-5xl flex-col lg:flex-row-reverse glass">
+      <div className="hero min-h-screen bg-red-800">
+         <div className="hero-content max-w-5xl flex-col lg:flex-row-reverse glass shadow-md">
             <img
                src="src/assets/img/TS4-hero.jpeg"
                className="max-w-sm rounded-lg shadow-2xl"

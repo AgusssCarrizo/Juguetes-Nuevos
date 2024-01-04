@@ -1,7 +1,7 @@
 export default function Header() {
    return (
-      <div className="navbar bg-ros-secondary">
-         <div className="navbar-start">
+      <div className="navbar   bg-ros-secondary">
+         <div className="navbar-start ">
             <div className="dropdown">
                <div
                   tabIndex={0}
@@ -43,22 +43,22 @@ export default function Header() {
                   </li>
                </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <a className="btn btn-ghost text-3xl text-red-800 font-mono">JN</a>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu gap-3 menu-horizontal px-1 ">
                <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-slate-400">
+                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
                      Home
                   </a>
                </li>
                <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-slate-400">
+                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
                      Juguetes
                   </a>
                </li>
                <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-slate-400">
+                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
                      Contacto
                   </a>
                </li>
