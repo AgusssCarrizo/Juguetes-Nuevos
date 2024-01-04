@@ -1,7 +1,7 @@
 export const categorias = [
    {
       id: 1,
-      img: "src/assets/img/Arrastre/Andador-Forest-Animals-236x300.jpeg",
+      img: "./src/assets/img/Arrastre/Andador-Forest-Animals-236x300.jpeg",
       title: "Andadador Forest Animal",
       price: "",
       category: "Arrastre",
