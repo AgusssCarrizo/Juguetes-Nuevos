@@ -1,26 +1,26 @@
 export const categorias = [
    {
       id: 1,
-      img: "./src/assets/img/Arrastre/Andador-Forest-Animals-236x300.jpeg",
+      img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405083/Andador-Forest-Animals-236x300_fgbdyb.jpg",
       title: "Andadador Forest Animal",
       price: "",
       category: "Arrastre",
    },
    {
       id: 2,
-      img: "src/assets/img/Arrastre/Autito.jpeg",
+      img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405130/Autito_c5ktz6.jpg",
       title: "Andador con forma de auto",
       category: "Arrastre",
    },
    {
       id: 3,
-      img: "src/assets/img/Arrastre/Camion-con-remolque.png",
+      img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405173/Camion-con-remolque_oi0fo2.png",
       title: "Camion con remolque",
       category: "Arrastre",
    },
    {
       id: 4,
-      img: "src/assets/img/Arrastre/Carrito-ensarte-003.jpeg",
+      img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405181/Carrito-ensarte-003_lxesth.jpg",
       title: "Carrito con aros",
       category: "Arrastre",
    },
