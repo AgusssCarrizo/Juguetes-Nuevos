@@ -15,11 +15,10 @@ function App() {
 
          <Hero />
 
-         <div className="gap-20 flex flex-wrap  flex-col items-center p-20 bg-gradient-to-r from-am-primary to-am-secondary ">
+         <div className="gap-20 flex flex-wrap  flex-col items-center  bg-gradient-to-r from-am-primary to-am-secondary">
             <Selectores />
-            <div className="">
-               <Categorias />
-            </div>
+
+            <Categorias />
          </div>
 
          <Footer />

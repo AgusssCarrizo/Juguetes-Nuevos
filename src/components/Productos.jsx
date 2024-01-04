@@ -4,18 +4,20 @@ import Categorias from "./Categorias";
 
 export default function Productos({img, title, category}) {
    return (
-      <div className="card w-96 bg-base-100 shadow-xl ">
+      <div className="card w-52 md:w-96 bg-roj-secondary shadow-xl mb-6">
          <figure>
             <img src={img} alt="Shoes" className="h-[200px] mt-6" />
          </figure>
          <div className="card-body ">
-            <h2 className="card-title  ">
+            <h2 className="card-title  text-black">
                {title}
                <div className="badge badge-secondary  ">{category}</div>
             </h2>
             <p>Precio</p>
             <div className="card-actions justify-end">
-               <div className="btn btn-outline">Ver más</div>
+               <div className="btn btn-info btn-outline hover:btn-info">
+                  Comprar
+               </div>
             </div>
          </div>
       </div>
