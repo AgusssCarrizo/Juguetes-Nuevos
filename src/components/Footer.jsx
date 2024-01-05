@@ -12,7 +12,7 @@ export default function Footer() {
             <p>
                © CarriDev
                <br />
-               Providing reliable tech since 1992
+               El compromiso del desarrollo.
             </p>
          </aside>
          <nav className="md:pt-9 ">

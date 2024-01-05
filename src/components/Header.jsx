@@ -21,27 +21,6 @@ export default function Header() {
                      />
                   </svg>
                </div>
-               <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li>
-                     <a>Home</a>
-                  </li>
-                  <li>
-                     <a>Jueguetes</a>
-                     <ul className="p-2">
-                        <li>
-                           <a>Submenu 1</a>
-                        </li>
-                        <li>
-                           <a>Submenu 2</a>
-                        </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <a>Item 3</a>
-                  </li>
-               </ul>
             </div>
             <a className="btn btn-ghost text-3xl text-red-800 font-mono">JN</a>
          </div>
