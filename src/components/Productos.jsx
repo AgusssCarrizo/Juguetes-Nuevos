@@ -1,7 +1,5 @@
 import React from "react";
 
-import Categorias from "./Categorias";
-
 export default function Productos({img, title, category}) {
    return (
       <div className="card w-72 md:w-96 bg-roj-secondary shadow-xl mb-6">

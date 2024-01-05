@@ -7,8 +7,6 @@ import Selectores from "./components/Selectores";
 import Categorias from "./components/Categorias";
 
 function App() {
-   const [count, setCount] = useState(0);
-
    return (
       <>
          <Header />
@@ -17,7 +15,6 @@ function App() {
 
          <div className="gap-20 flex flex-wrap  flex-col items-center  bg-gradient-to-r from-am-primary to-am-secondary">
             <Selectores />
-
             <Categorias />
          </div>
 
