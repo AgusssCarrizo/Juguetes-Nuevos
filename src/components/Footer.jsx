@@ -5,7 +5,7 @@ export default function Footer() {
       <footer className="footer p-4 bg-slate-300  text-black justify-center md:justify-normal ">
          <aside className="pb-3 border-b border-solid border-black w-64 md:border-none">
             <img
-               src="./src/assets/img/Logo/Mi-logo.png"
+               src="https://res.cloudinary.com/diotu9grj/image/upload/v1704463979/Mi-logo_sllluo.png"
                alt=""
                className="h-32"
             />
