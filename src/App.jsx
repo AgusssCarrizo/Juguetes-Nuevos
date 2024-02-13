@@ -1,25 +1,20 @@
-import {useState} from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-
-import Selectores from "./components/Selectores";
-import Categorias from "./components/Categorias";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./Pages/About/Home.jsx";
+import PageProd from "./Pages/Productos/PageProd.jsx";
+import Layout from "./Pages/Layout.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
 
 function App() {
    return (
-      <>
-         <Header />
-
-         <Hero />
-
-         <div className="gap-20 flex flex-wrap  flex-col items-center  bg-gradient-to-r from-am-primary to-am-secondary">
-            <Selectores />
-            <Categorias />
-         </div>
-
-         <Footer />
-      </>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<Layout />}>
+               <Route index element={<Home />} />
+               <Route path="juguetes" element={<PageProd />} />
+               <Route path="contact" element={<Contact />} />
+            </Route>
+         </Routes>
+      </BrowserRouter>
    );
 }
 

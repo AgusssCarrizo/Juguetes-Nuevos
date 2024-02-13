@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Selectores() {
    return (
       <div className="flex gap-2 flex-wrap mt-6 justify-center">

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function Header() {
    return (
       <div className="navbar   bg-ros-secondary">
@@ -26,20 +28,14 @@ export default function Header() {
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu gap-3 menu-horizontal px-1 ">
-               <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
-                     Home
-                  </a>
+               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+                  <Link to="/">Home</Link>
                </li>
-               <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
-                     Juguetes
-                  </a>
+               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+                  <Link to="juguetes">Juguetes</Link>
                </li>
-               <li>
-                  <a className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
-                     Contacto
-                  </a>
+               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+                  <Link to="contact">Contacto</Link>
                </li>
             </ul>
          </div>
