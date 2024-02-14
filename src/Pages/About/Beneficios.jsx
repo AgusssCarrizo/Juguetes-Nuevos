@@ -19,7 +19,7 @@ export default function Beneficios() {
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
                   <img
-                     src="src/assets/img/Beneficios/Calidad.png"
+                     src="https://res.cloudinary.com/diotu9grj/image/upload/v1707890120/Calidad_s2qptv.png"
                      alt="Calidad"
                      className="h-14"
                   />
@@ -30,7 +30,7 @@ export default function Beneficios() {
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
                   <img
-                     src="src/assets/img/Beneficios/Calidad.png"
+                     src="https://res.cloudinary.com/diotu9grj/image/upload/v1707890120/Calidad_s2qptv.png"
                      alt="Calidad"
                      className="h-14"
                   />
@@ -41,7 +41,7 @@ export default function Beneficios() {
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
                   <img
-                     src="src/assets/img/Beneficios/Calidad.png"
+                     src="https://res.cloudinary.com/diotu9grj/image/upload/v1707890120/Calidad_s2qptv.png"
                      alt="Calidad"
                      className="h-14"
                   />
@@ -52,7 +52,7 @@ export default function Beneficios() {
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
                   <img
-                     src="src/assets/img/Beneficios/Calidad.png"
+                     src="https://res.cloudinary.com/diotu9grj/image/upload/v1707890120/Calidad_s2qptv.png"
                      alt="Calidad"
                      className="h-14"
                   />
