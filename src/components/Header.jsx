@@ -1,33 +1,25 @@
+import {useState} from "react";
 import {Link} from "react-router-dom";
 
 export default function Header() {
+   let [open, setOpen] = useState(false);
    return (
       <div className="navbar   bg-ros-secondary">
-         <div className="navbar-start ">
-            <div className="dropdown">
-               <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost lg:hidden">
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     className="h-5 w-5"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke="currentColor">
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6h16M4 12h8m-8 6h16"
-                     />
-                  </svg>
+         <div className="navbar-start">
+            <div
+               onClick={() => setOpen(!open)}
+               className="md:hidden cursor-pointer">
+               <div className="text-2xl text-black">
+                  <ion-icon name={open ? "close" : "menu-outline"}></ion-icon>
                </div>
             </div>
             <a className="btn btn-ghost text-3xl text-red-800 font-mono">JN</a>
          </div>
-         <div className="navbar-center hidden lg:flex">
-            <ul className="menu gap-3 menu-horizontal px-1 ">
+         <div className="navbar-center flex-col lg:flex">
+            <ul
+               className={`menu absolute md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in ${
+                  open ? "top-20" : "top-[-490px]"
+               } `}>
                <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
                   <Link to="/">Home</Link>
                </li>
