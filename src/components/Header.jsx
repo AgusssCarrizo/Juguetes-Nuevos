@@ -17,16 +17,16 @@ export default function Header() {
          </div>
          <div className="navbar-center flex-col lg:flex">
             <ul
-               className={`menu absolute md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in ${
-                  open ? "top-20" : "top-[-490px]"
+               className={`menu absolute text-black md:text-white  md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in w-full bg-rose-200 md:bg-transparent z-20 ${
+                  open ? " top-16 " : "top-[-490px]"
                } `}>
-               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center">
                   <Link to="/">Home</Link>
                </li>
-               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center border-t border-ros-primary">
                   <Link to="juguetes">Juguetes</Link>
                </li>
-               <li className="h-10 w-18 text-white hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 bg-ros-primary">
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center border-t border-ros-primary">
                   <Link to="contact">Contacto</Link>
                </li>
             </ul>

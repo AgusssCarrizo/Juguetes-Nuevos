@@ -4,11 +4,11 @@ export default function Beneficios() {
          <div className="flex flex-wrap gap-20 relative w-auto bottom-[115px]">
             <div className="rounded-full  h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
             <div className="rounded-full  h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
-            <div className="rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
-            <div className="rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
-            <div className="rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
-            <div className="rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
-            <div className="rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
+            <div className="hidden md:flex rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
+            <div className="hidden md:flex rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
+            <div className="hidden lg:flex rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
+            <div className="hidden lg:flex rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
+            <div className="hidden md:flex rounded-full h-28 w-28 bg-red-200 border-red-800 border-4 border-dashed animate-spin"></div>
          </div>
          <h3
             className=" text-3xl font-bold -mt-20

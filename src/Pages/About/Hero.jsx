@@ -11,7 +11,7 @@ export default function Hero() {
                   ¡Juguetes nuevos!
                </h1>
                <p className="py-6 text-black">Esta es una tienda de juguetes</p>
-               <button className="btn  btn-outline btn-info hover:btn-info ">
+               <button className="btn  btn-outline btn-warning hover:btn-info ">
                   Saber más
                </button>
             </div>

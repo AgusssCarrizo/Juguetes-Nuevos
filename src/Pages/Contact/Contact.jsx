@@ -2,9 +2,13 @@ import React from "react";
 
 export default function Contact() {
    return (
-      <div className="flex bg-gradient-to-r from-am-primary to-am-secondary">
-         <div>
-            <img src="src/assets/img/TS4-hero.jpeg" alt="" />
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-0 bg-gradient-to-r from-am-primary to-am-secondary py-10 px-4">
+         <div className="w-5/12 my-auto">
+            <img
+               src="https://res.cloudinary.com/diotu9grj/image/upload/v1704406019/TS4-hero_xsx5bv.jpg"
+               alt=""
+               className=" shadow-lg"
+            />
          </div>
          <div className="flex flex-col justify-center mx-auto w-80 gap-6">
             <h2 className="text-3xl font-extrabold text-pink-800 text-center ">
