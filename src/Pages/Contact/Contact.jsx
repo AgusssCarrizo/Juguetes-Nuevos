@@ -29,7 +29,7 @@ export default function Contact() {
                className="input input-bordered  input-secondary w-full max-w-xs bg-gray-800"
             />
             <input
-               type="number"
+               type="text"
                placeholder="Telefono"
                className="input input-bordered  input-secondary w-full max-w-xs bg-gray-800"
             />
