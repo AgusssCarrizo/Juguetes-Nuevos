@@ -6,7 +6,7 @@ export default function PageProd() {
    return (
       <div>
          {" "}
-         <div className="gap-20 flex flex-wrap  flex-col items-center  bg-gradient-to-r from-am-primary to-am-secondary">
+         <div className="gap-20 flex flex-wrap  flex-col items-center  bg-LightSkyBlue">
             <Selectores />
             <Categorias />
          </div>

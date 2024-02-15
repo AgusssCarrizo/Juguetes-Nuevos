@@ -4,43 +4,39 @@ import {Link} from "react-router-dom";
 export default function Header() {
    let [open, setOpen] = useState(false);
    return (
-      <div className="navbar   bg-ros-secondary">
-         <div className="navbar-start">
+      <div className="navbar z-50   bg-blue-800">
+         <div className="navbar-start ">
             <div
                onClick={() => setOpen(!open)}
                className="md:hidden cursor-pointer">
                <div className="text-2xl text-black">
-                  <ion-icon name={open ? "close" : "menu-outline"}></ion-icon>
+                  <ion-icon
+                     name={open ? "close" : "menu-outline"}
+                     color="light"></ion-icon>
                </div>
             </div>
             <a className="btn btn-ghost text-3xl text-red-800 font-mono">JN</a>
          </div>
-         <div className="navbar-center flex-col lg:flex">
+         <div className="navbar-center flex-col lg:flex z-40">
             <ul
-               className={`menu absolute text-black md:text-white  md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in w-full bg-rose-200 md:bg-transparent z-20 ${
+               className={`menu absolute text-black md:text-white  md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in w-11/12 md:w-full bg-blue-400 md:bg-transparent z-20 border-2 border-slate-700 md:border-none rounded-b-lg ${
                   open ? " top-16 " : "top-[-490px]"
                } `}>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center">
-                  <Link to="/">Home</Link>
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center ">
+                  <Link className="w-full flex justify-center     " to="/">
+                     Home
+                  </Link>
                </li>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center border-t border-ros-primary">
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
                   <Link to="juguetes">Juguetes</Link>
                </li>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-ros-primary items-center border-t border-ros-primary">
+               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
                   <Link to="contact">Contacto</Link>
                </li>
             </ul>
          </div>
-         <div className="navbar-end ">
-            <svg
-               xmlns="http://www.w3.org/2000/svg"
-               width="25"
-               height="25"
-               className="text-black hover:cursor-pointer mr-4"
-               class="bi bi-cart"
-               viewBox="0 0 16 16">
-               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-            </svg>
+         <div className="navbar-end text-2xl">
+            <ion-icon name="cart-sharp" color="light"></ion-icon>
          </div>
       </div>
    );
