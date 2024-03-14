@@ -1,8 +1,17 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import Carrito from "./Carrito";
 
 export default function Header() {
    let [open, setOpen] = useState(false);
+   const [carrito, setCarrito] = useState(false);
+   const [animarCarrito, setAnimarCarrito] = useState(false);
+   const handleCarrito = () => {
+      setCarrito(true);
+      setTimeout(() => {
+         setAnimarCarrito(true);
+      }, 1000);
+   };
    return (
       <div className="navbar z-50   bg-blue-800">
          <div className="navbar-start ">
@@ -36,7 +45,17 @@ export default function Header() {
             </ul>
          </div>
          <div className="navbar-end text-2xl">
-            <ion-icon name="cart-sharp" color="light"></ion-icon>
+            <ion-icon
+               name="cart-sharp"
+               color="light"
+               onClick={handleCarrito}></ion-icon>
+            {carrito && (
+               <Carrito
+                  setCarrito={setCarrito}
+                  animarCarrito={animarCarrito}
+                  setAnimarCarrito={setAnimarCarrito}
+               />
+            )}
          </div>
       </div>
    );

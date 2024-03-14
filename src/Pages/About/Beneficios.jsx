@@ -16,7 +16,7 @@ export default function Beneficios() {
                   />
                </div>
                <p className="text-black text-xl font-mono">Calidad</p>
-               <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
+               <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
             </div>
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
@@ -27,7 +27,7 @@ export default function Beneficios() {
                   />
                </div>
                <p className="text-black text-xl font-mono">Calidad</p>
-               <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
+               <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
             </div>
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
@@ -38,7 +38,7 @@ export default function Beneficios() {
                   />
                </div>
                <p className="text-black text-xl font-mono">Calidad</p>
-               <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
+               <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
             </div>
             <div className="w-52 h-52 bg-slate-200 flex flex-col items-center justify-around rounded p-2 ">
                <div className=" h-14">
@@ -49,7 +49,7 @@ export default function Beneficios() {
                   />
                </div>
                <p className="text-black text-xl font-mono">Calidad</p>
-               <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
+               <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 "></span>
             </div>
          </div>
       </div>

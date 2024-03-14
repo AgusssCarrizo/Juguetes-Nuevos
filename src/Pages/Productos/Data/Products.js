@@ -1,4 +1,4 @@
-export const categorias = [
+export const Products = [
    {
       id: 1,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405083/Andador-Forest-Animals-236x300_fgbdyb.jpg",
@@ -79,3 +79,5 @@ export const categorias = [
       category: "Didacticos",
    },
 ];
+
+export const TotalProducts = Products.length;

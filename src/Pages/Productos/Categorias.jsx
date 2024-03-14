@@ -1,12 +1,13 @@
-import React from "react";
-import {categorias} from "./Data/categorias";
-import Productos from "./Productos";
+import Selectores from "./Selectores";
+import {Categories} from "./Data/Categories";
+import {useSelector} from "react-redux";
 
 export default function Categorias() {
+   const categories = useSelector((state) => state.categories.categories);
    return (
       <div className="flex flex-wrap gap-8 justify-center">
-         {categorias.map((cat) => (
-            <Productos key={cat.id} {...cat} />
+         {categories.map((category) => (
+            <Selectores key={category.id} {...category} />
          ))}
       </div>
    );
