@@ -1,6 +1,6 @@
 export default function Footer() {
    return (
-      <footer className="footer p-4 bg-slate-300  text-black justify-center md:justify-normal ">
+      <footer className="footer p-4 bg-slate-400  text-black justify-center md:justify-normal ">
          <aside className="pb-3 border-b border-solid border-black w-64 md:border-none">
             <img
                src="https://res.cloudinary.com/diotu9grj/image/upload/v1704463979/Mi-logo_sllluo.png"
