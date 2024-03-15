@@ -21,7 +21,7 @@ export default function Header() {
       dispatch(toggleHiddenCart()); // Aquí se despacha la acción toggleHiddenCart
    };
    return (
-      <div className="navbar z-50   bg-blue-800">
+      <div className="navbar z-50   bg-blue-900">
          <div className="navbar-start ">
             <div
                onClick={() => setOpen(!open)}
