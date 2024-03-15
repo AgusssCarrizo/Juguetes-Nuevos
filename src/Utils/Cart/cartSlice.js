@@ -37,10 +37,11 @@ const cartSlice = createSlice({
          cartItems: [],
          shippingCost: 0,
       };
-      toggleHiddenCart: (state) => {
-         return {
-            hidden: !state.hidden,
-         };
+   },
+   toggleHiddenCart: (state) => {
+      return {
+         ...state,
+         hidden: !state.hidden,
       };
    },
 });

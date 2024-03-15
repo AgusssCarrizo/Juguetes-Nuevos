@@ -1,5 +1,9 @@
 import React from "react";
-export default function Productos({img, title, category}) {
+import {useDispatch} from "react-redux";
+import {addToCart} from "/Users/agustincarrizo/Desktop/ProgramacionC/Entregas/React/proyecto-uno/src/Utils/Cart/cartSlice.js";
+
+export default function Productos({img, title, category, price, id}) {
+   const dispatch = useDispatch();
    return (
       <div className="card w-64 md:w-96 h-100 bg-gray-200 shadow-xl mb-6">
          <figure>
@@ -14,11 +18,16 @@ export default function Productos({img, title, category}) {
                   {category}
                </div>
             </div>
-            <p className="text-black">Precio</p>
+            <p className="text-black">
+               <span>$</span>
+               {price}
+            </p>
             <div className="card-actions justify-end">
-               <div className="btn btn-warning btn-outline hover:btn-warning">
+               <button
+                  className="btn btn-warning btn-outline hover:btn-warning"
+                  onClick={() => dispatch(addToCart({img, title, price, id}))}>
                   Comprar
-               </div>
+               </button>
             </div>
          </div>
       </div>

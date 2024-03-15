@@ -5,20 +5,26 @@ import storage from "redux-persist/lib/storage";
 import categoriesSlice from "./categoriesSlice";
 import productsSlice from "./products/productsSlice";
 
+//Cart
+import cartSlice from "/Users/agustincarrizo/Desktop/ProgramacionC/Entregas/React/proyecto-uno/src/Utils/Cart/cartSlice.js";
+
 const reducers = combineReducers({
    categories: categoriesSlice,
    juguetes: productsSlice,
+   cart: cartSlice,
 });
 
 const persistConfig = {
    key: "root",
    storage,
-   whiteList: [],
+   whiteList: ["cart"],
 };
 const persistedReducer = persistReducers(persistConfig, reducers);
 
 export const store = configureStore({
    reducer: persistedReducer,
+   middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({serializableCheck: false}),
 });
 
 export const persistor = persistStore(store);

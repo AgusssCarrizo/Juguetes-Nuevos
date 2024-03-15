@@ -1,16 +1,18 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
+
 import Carrito from "./Carrito";
 
 export default function Header() {
    let [open, setOpen] = useState(false);
    const [carrito, setCarrito] = useState(false);
    const [animarCarrito, setAnimarCarrito] = useState(false);
+
    const handleCarrito = () => {
       setCarrito(true);
       setTimeout(() => {
          setAnimarCarrito(true);
-      }, 1000);
+      }, 100);
    };
    return (
       <div className="navbar z-50   bg-blue-800">
