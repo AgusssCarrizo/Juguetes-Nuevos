@@ -1,9 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-import {
-   Products,
-   TotalProducts,
-} from "/Users/agustincarrizo/Desktop/ProgramacionC/Entregas/React/proyecto-uno/src/Pages/Productos/Data/Products.js";
+import {Products, TotalProducts} from "../../Pages/Productos/Data/Products.js";
 
 const INITIAL_STATE = {
    products: Products,

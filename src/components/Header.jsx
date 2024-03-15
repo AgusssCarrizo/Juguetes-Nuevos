@@ -1,6 +1,9 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 
+import {useDispatch} from "react-redux";
+import {toggleHiddenCart} from "../redux/Cart/cartSlice.js";
+
 import Carrito from "./Carrito";
 
 export default function Header() {
@@ -8,11 +11,14 @@ export default function Header() {
    const [carrito, setCarrito] = useState(false);
    const [animarCarrito, setAnimarCarrito] = useState(false);
 
+   const dispatch = useDispatch(); // Aquí se inicializa el hook useDispatch
    const handleCarrito = () => {
-      setCarrito(true);
+      setAnimarCarrito((prevAnimarCarrito) => !prevAnimarCarrito); // Aquí se alterna el estado de animarCarrito
       setTimeout(() => {
-         setAnimarCarrito(true);
+         setCarrito((prevCarrito) => !prevCarrito); // Aquí se alterna el estado de carrito
       }, 100);
+
+      dispatch(toggleHiddenCart()); // Aquí se despacha la acción toggleHiddenCart
    };
    return (
       <div className="navbar z-50   bg-blue-800">

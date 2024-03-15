@@ -6,7 +6,7 @@ import categoriesSlice from "./categoriesSlice";
 import productsSlice from "./products/productsSlice";
 
 //Cart
-import cartSlice from "/Users/agustincarrizo/Desktop/ProgramacionC/Entregas/React/proyecto-uno/src/Utils/Cart/cartSlice.js";
+import cartSlice from "../redux/Cart/cartSlice";
 
 const reducers = combineReducers({
    categories: categoriesSlice,

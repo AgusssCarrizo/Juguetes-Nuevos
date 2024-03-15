@@ -1,7 +1,6 @@
 import React from "react";
 import Productos from "./Productos.jsx";
 import {useSelector} from "react-redux";
-import {Products} from "./Data/Products.js";
 
 export default function Juguetes() {
    const juguetes = useSelector((state) => state.juguetes.products);

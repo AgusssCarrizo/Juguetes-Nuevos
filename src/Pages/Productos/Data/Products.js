@@ -52,7 +52,7 @@ export const Products = [
       id: 8,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405445/Life_wxccfs.webp",
       title: "Life",
-      price: 3.0,
+      price: 3000,
       category: "mesa",
    },
    {
