@@ -1,37 +1,45 @@
 import React from "react";
 import Productos from "./Productos.jsx";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 export default function Juguetes() {
-   let juguetes = useSelector((state) => {
-      console.log(state.juguetes);
-      return state.juguetes;
-   });
-   const selectedCategory = useSelector(
-      (state) => state.categories.selectedCategory
-   );
+  let juguetes = useSelector((state) => {
+    return state.juguetes;
+  });
+  const selectedCategory = useSelector(
+    (state) => state.categories.selectedCategory
+  );
 
-   // Verificar si juguetes es un array, si no, convertirlo en uno
-   if (!Array.isArray(juguetes)) {
-      juguetes = Object.values(juguetes);
-   }
+  // Verificar si juguetes es un array, si no, convertirlo en uno
+  if (juguetes && !Array.isArray(juguetes)) {
+    juguetes = Object.values(juguetes);
+  }
 
-   console.log("Antes de filtrar:", juguetes);
-
-   // Filtrar juguetes solo si selectedCategory no es null
-   if (selectedCategory) {
-      juguetes = juguetes.filter(
-         (juguete) => juguete.category === selectedCategory
+  if (selectedCategory && selectedCategory !== "Todos") {
+    juguetes = juguetes
+      .flat()
+      .filter(
+        (juguete) =>
+          typeof juguete === "object" &&
+          juguete !== null &&
+          juguete.category === selectedCategory
       );
-   }
-   console.log("Después de filtrar:", juguetes, selectedCategory);
+  } else {
+    // Si selectedCategory es "Todos" o no está definido, mostrar todos los juguetes
+    juguetes = juguetes.flat();
+  }
 
-   return (
-      <div>
-         {juguetes &&
-            juguetes.map((Product) => {
-               return <Productos key={Product.id} product={Product} />;
-            })}
-      </div>
-   );
+  console.log("Después de filtrar:", juguetes, selectedCategory);
+
+  return (
+    <div>
+      {Array.isArray(juguetes) &&
+        juguetes.map((juguete) => {
+          if (juguete.id || selectedCategory) {
+            return <Productos key={juguete.id} juguetes={[juguete]} />;
+          }
+          return null;
+        })}
+    </div>
+  );
 }
