@@ -5,6 +5,7 @@ import {createSlice} from "@reduxjs/toolkit";
 const INITAL_STATE = {
    cartItems: [],
    hidden: true,
+   modalOpen: false,
 };
 
 const cartSlice = createSlice({
@@ -23,6 +24,14 @@ const cartSlice = createSlice({
             cartItems: removeItemFromCart(state.cartItems, action.payload),
          };
       },
+      clearItemFromCart: (state, action) => {
+         return {
+            ...state,
+            cartItems: state.cartItems.filter(
+               (item) => item.id !== action.payload
+            ),
+         };
+      },
       clearCart: (state) => {
          return {
             ...state,
@@ -35,10 +44,23 @@ const cartSlice = createSlice({
             hidden: !state.hidden,
          };
       },
+      openModal: (state) => {
+         state.modalOpen = true;
+      },
+      closeModal: (state) => {
+         state.modalOpen = false;
+      },
    },
 });
 
-export const {addToCart, removeFromCart, clearCart, toggleHiddenCart} =
-   cartSlice.actions;
+export const {
+   addToCart,
+   removeFromCart,
+   clearCart,
+   toggleHiddenCart,
+   clearItemFromCart,
+   openModal,
+   closeModal,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

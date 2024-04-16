@@ -1,8 +1,9 @@
-import React from "react";
+import {formatPrice} from "../../Utils/formatPrice.js";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../redux/Cart/cartSlice.js";
 
-export default function Productos({img, title, category, price, id}) {
+export default function Productos({product}) {
+   const {img, title, category, price, id} = product;
    const dispatch = useDispatch();
    return (
       <div className="card w-64 md:w-96 h-100 bg-gray-200 shadow-xl mb-6">
@@ -18,10 +19,7 @@ export default function Productos({img, title, category, price, id}) {
                   {category}
                </div>
             </div>
-            <p className="text-black">
-               <span>$</span>
-               {price}
-            </p>
+            <p className="text-black">{formatPrice(price)}</p>
             <div className="card-actions justify-end">
                <button
                   className="btn btn-warning btn-outline hover:btn-warning"

@@ -2,21 +2,21 @@ export const Categories = [
    {
       id: 1,
 
-      category: "  Destacados",
+      category: "Todos",
    },
    {
       id: 2,
 
-      category: "    Arrastre",
+      category: "Arrastre",
    },
    {
       id: 3,
 
-      category: "      De mesa",
+      category: "mesa",
    },
    {
       id: 4,
 
-      category: "        Didácticos",
+      category: "Didacticos",
    },
 ];

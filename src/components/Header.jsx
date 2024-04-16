@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 
 import {useDispatch} from "react-redux";
 import {toggleHiddenCart} from "../redux/Cart/cartSlice.js";
-
+import CartBurble from "./CartBurble.jsx";
 import Carrito from "./Carrito";
-
+import Modal from "./Modal.jsx";
 export default function Header() {
    let [open, setOpen] = useState(false);
    const [carrito, setCarrito] = useState(false);
@@ -39,20 +39,25 @@ export default function Header() {
                className={`menu absolute text-black md:text-white  md:static gap-3 menu-vertical md:menu-horizontal  px-1 transition-all duration-500 ease-in w-11/12 md:w-full bg-blue-400 md:bg-transparent z-20 border-2 border-slate-700 md:border-none rounded-b-lg ${
                   open ? " top-16 " : "top-[-490px]"
                } `}>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center ">
-                  <Link className="w-full flex justify-center     " to="/">
+               <li className=" hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center ">
+                  <Link to="/" className="btn-md">
                      Home
                   </Link>
                </li>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
-                  <Link to="juguetes">Juguetes</Link>
+               <li className=" hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
+                  <Link to="juguetes" className="btn-md">
+                     Juguetes
+                  </Link>
                </li>
-               <li className="h-10 w-18 hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
-                  <Link to="contact">Contacto</Link>
+               <li className=" hover:underline hover:decoration-solid  hover:text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
+                  <Link to="contact" className="btn-md">
+                     Contacto
+                  </Link>
                </li>
             </ul>
          </div>
-         <div className="navbar-end text-2xl">
+         <div className="navbar-end text-2xl mr-4">
+            <CartBurble />
             <ion-icon
                name="cart-sharp"
                color="light"
@@ -65,6 +70,7 @@ export default function Header() {
                />
             )}
          </div>
+         <Modal />
       </div>
    );
 }

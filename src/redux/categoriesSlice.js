@@ -1,20 +1,23 @@
-import {Categories} from "/Users/agustincarrizo/Desktop/ProgramacionC/Entregas/React/proyecto-uno/src/Pages/Productos/Data/Categories.js";
+import {Categories} from "../Pages/Productos/Data/Categories";
 import {createSlice} from "@reduxjs/toolkit";
 
 const INITAL_STATE = {
    categories: Categories,
+   selectedCategory: null,
 };
 
 export const categoriesSlice = createSlice({
    name: "categories",
    initialState: INITAL_STATE,
    reducers: {
-      getCategories: (state) => {
-         return state;
+      selectCategory: (state, action) => {
+         state.selectedCategory =
+            action.payload !== state.selectedCategory ? action.payload : null;
       },
+      getCategories: (state) => state.categories,
    },
 });
 
-export const {getCategories} = categoriesSlice.actions;
+export const {getCategories, selectCategory} = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;

@@ -1,7 +1,7 @@
 import React from "react";
-import Selectores from "./Selectores.jsx";
+
 import Categorias from "./Categorias.jsx";
-import Productos from "./Productos.jsx";
+
 import Juguetes from "./Juguetes.jsx";
 
 export default function PageProd() {

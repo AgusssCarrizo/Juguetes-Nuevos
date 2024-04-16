@@ -1,22 +1,22 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-import {Products, TotalProducts} from "../../Pages/Productos/Data/Products.js";
+import {
+   Products as ImportedProducts,
+   TotalProducts as ImportedTotalProducts,
+   products as ImportedCategorizedProducts,
+} from "../../Pages/Productos/Data/Products.js";
 
 const INITIAL_STATE = {
-   products: Products,
-   TotalProducts: TotalProducts,
+   products: ImportedProducts,
+   TotalProducts: ImportedTotalProducts,
+   categorizedProducts: ImportedCategorizedProducts,
 };
-
 export const productsSlice = createSlice({
    name: "juguetes",
    initialState: INITIAL_STATE,
    reducers: {
-      getProducts: (state) => {
-         return state;
-      },
+      getProducts: (state) => state.products,
    },
 });
-
-export const {getProducts} = productsSlice.actions;
 
 export default productsSlice.reducer;

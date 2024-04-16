@@ -10,7 +10,7 @@ export const Products = [
       id: 2,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405130/Autito_c5ktz6.jpg",
       title: "Andador con forma de auto",
-      price: 3000,
+      price: 8700,
       category: "Arrastre",
    },
    {
@@ -24,42 +24,42 @@ export const Products = [
       id: 4,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405181/Carrito-ensarte-003_lxesth.jpg",
       title: "Carrito con aros",
-      price: 3000,
+      price: 3700,
       category: "Arrastre",
    },
    {
       id: 5,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405417/Ajedrez_uidr62.webp",
       title: "Ajedrez",
-      price: 3000,
+      price: 5000,
       category: "mesa",
    },
    {
       id: 6,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405427/Digalo-con-meme_hm1fex.webp",
       title: "Digalo con memes",
-      price: 3000,
+      price: 4500,
       category: "mesa",
    },
    {
       id: 7,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405436/El-erudito_zradye.webp",
       title: "El erudito",
-      price: 300,
+      price: 3100,
       category: "mesa",
    },
    {
       id: 8,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405445/Life_wxccfs.webp",
       title: "Life",
-      price: 3000,
+      price: 4500,
       category: "mesa",
    },
    {
       id: 9,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405453/Uno_xm9zuk.webp",
       title: "Uno",
-      price: 3000,
+      price: 2500,
       category: "mesa",
    },
    {
@@ -80,16 +80,24 @@ export const Products = [
       id: 12,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405966/Rompecabezas-el-circo_hgx40b.jpg",
       title: "Rompecabezas el circo 60 piezas",
-      price: 3000,
+      price: 3400,
       category: "Didacticos",
    },
    {
       id: 13,
       img: "https://res.cloudinary.com/diotu9grj/image/upload/v1704405973/Sistema-solar_f1tumo.jpg",
       title: "Encastre sistema solar espacio planetas de madera.",
-      price: 3000,
+      price: 2500,
       category: "Didacticos",
    },
 ];
 
 export const TotalProducts = Products.length;
+
+export const products = Products.reduce((acc, product) => {
+   if (!acc[product.category]) {
+      acc[product.category] = [];
+   }
+   acc[product.category] = [...acc[product.category], product];
+   return acc;
+}, {});

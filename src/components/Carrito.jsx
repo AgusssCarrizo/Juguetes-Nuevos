@@ -1,6 +1,11 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {clearCart, toggleHiddenCart} from "../redux/Cart/cartSlice.js";
+import {
+   clearCart,
+   toggleHiddenCart,
+   openModal,
+} from "../redux/Cart/cartSlice.js";
+import CartProducto from "./CartProducto.jsx";
 
 function Carrito({animarCarrito, setAnimarCarrito}) {
    const cartItems = useSelector((state) => state.cart.cartItems);
@@ -16,6 +21,7 @@ function Carrito({animarCarrito, setAnimarCarrito}) {
            return acc + item.price * item.quantity;
         }, 0)
       : 0;
+
    return (
       <div
          className={`container w-full md:w-1/2  mt-10 -right-[1000px] absolute  top-8 z-40  
@@ -24,11 +30,7 @@ function Carrito({animarCarrito, setAnimarCarrito}) {
                   ? "absolute animate-fade-left animate-duration-[500ms] animate-ease-in right-[0]"
                   : ""
             }
-         `}
-         onClick={(event) => {
-            event.stopPropagation();
-            dispatch(toggleHiddenCart());
-         }}>
+         `}>
          <div className="bg-white shadow-md rounded-md ">
             <div className="absolute -left-7 top-3 w-8 h-8 bg-white text-center text-black">
                <i
@@ -41,6 +43,12 @@ function Carrito({animarCarrito, setAnimarCarrito}) {
             <div className=" px-6 py-4">
                <h2 className="text-xl font-bold">Carrito de Compras</h2>
             </div>
+            {cartItems.length ? (
+               cartItems.map((item) => <CartProducto key={item.id} {...item} />)
+            ) : (
+               <p>Carrito vacío</p>
+            )}
+
             <div className="px-6 py-4"></div>
             <div className="px-6 py-4 flex justify-between items-center">
                <div>
@@ -54,6 +62,8 @@ function Carrito({animarCarrito, setAnimarCarrito}) {
                   onClick={(event) => {
                      event.stopPropagation();
                      dispatch(toggleHiddenCart());
+                     dispatch(clearCart());
+                     dispatch(openModal());
                   }}>
                   Comprar
                </button>
