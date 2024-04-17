@@ -24,7 +24,7 @@ function Carrito({ animarCarrito, setAnimarCarrito }) {
 
   return (
     <div
-      className={`container w-full md:w-[40%] mt-10 -right-[1000px] absolute  top-8 z-40  
+      className={`container w-full md:w-[40%] mt-10 md:-right-[1000px] absolute  top-8 z-40  
             ${
               animarCarrito
                 ? "absolute animate-fade-left animate-duration-[500ms] animate-ease-in right-[0]"
