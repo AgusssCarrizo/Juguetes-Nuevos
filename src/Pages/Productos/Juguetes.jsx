@@ -32,7 +32,7 @@ export default function Juguetes() {
   console.log("Después de filtrar:", juguetes, selectedCategory);
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center gap-20">
       {Array.isArray(juguetes) &&
         juguetes.map((juguete) => {
           if (juguete.id || selectedCategory) {
