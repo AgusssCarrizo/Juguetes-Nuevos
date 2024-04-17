@@ -24,16 +24,16 @@ function Carrito({ animarCarrito, setAnimarCarrito }) {
 
   return (
     <div
-      className={`container w-full md:w-[40%] mt-10 md:-right-[1000px] absolute  top-8 z-40  
+      className={`container w-full md:w-[40%] mt-10 overflow-hidden -right-[1000px] absolute  top-8 z-40  
             ${
               animarCarrito
-                ? "absolute animate-fade-left animate-duration-[500ms] animate-ease-in right-[0]"
+                ? "absolute animate-fade-left overflow-visible animate-duration-[500ms] animate-ease-in -right-[0]"
                 : ""
             }
          `}
     >
       <div className="bg-white shadow-md rounded-md ">
-        <div className="absolute md:-left-7 right-1 md:top-3 w-8 h-8  bg-white text-center text-black">
+        <div className="absolute md:-left-7 md:top-3 right-2 w-8 h-8 bg-white text-center text-black">
           <i
             className={`fa-solid fa-angles-right`}
             onClick={(event) => {
@@ -71,7 +71,7 @@ function Carrito({ animarCarrito, setAnimarCarrito }) {
             Comprar
           </button>
           <button
-            className="bg-red-400 hover:bg-blue-600 text-white text-sm lg:text-2xl px-4 py-2 rounded-md"
+            className="bg-red-400 hover:bg-blue-600 text-white  px-4 py-2 rounded-md"
             onClick={(event) => {
               event.stopPropagation();
               dispatch(clearCart());
