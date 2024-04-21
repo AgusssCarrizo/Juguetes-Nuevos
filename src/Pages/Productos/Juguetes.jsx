@@ -34,9 +34,9 @@ export default function Juguetes() {
   return (
     <div className="flex flex-wrap justify-center gap-20">
       {Array.isArray(juguetes) &&
-        juguetes.map((juguete) => {
+        juguetes.map((juguete, index) => {
           if (juguete.id || selectedCategory) {
-            return <Productos key={juguete.id} juguete={juguete} />;
+            return <Productos key={index} juguete={juguete} />;
           }
           return null;
         })}
