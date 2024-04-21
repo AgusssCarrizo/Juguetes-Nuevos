@@ -20,6 +20,7 @@ export default function Header() {
 
     dispatch(toggleHiddenCart()); // Aquí se despacha la acción toggleHiddenCart
   };
+
   return (
     <div className="navbar z-50   bg-blue-900">
       <div className="navbar-start ">
@@ -65,7 +66,7 @@ export default function Header() {
           </li>
         </ul>
       </div>
-      <div className="navbar-end text-2xl mr-4">
+      <div className="navbar-end text-2xl md:mr-4">
         <CartBurble />
         <ion-icon
           name="cart-sharp"

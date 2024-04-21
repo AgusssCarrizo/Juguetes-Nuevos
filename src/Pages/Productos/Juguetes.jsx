@@ -36,7 +36,7 @@ export default function Juguetes() {
       {Array.isArray(juguetes) &&
         juguetes.map((juguete) => {
           if (juguete.id || selectedCategory) {
-            return <Productos key={juguete.id} juguetes={[juguete]} />;
+            return <Productos key={juguete.id} juguete={juguete} />;
           }
           return null;
         })}
