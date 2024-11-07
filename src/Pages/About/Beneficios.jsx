@@ -2,7 +2,7 @@ export default function Beneficios() {
   return (
     <div className="flex flex-col gap-16 items-center py-16  bg-gradient-to-b from-khaki  to-am-terciary">
       <h3
-        className=" text-3xl font-bold 
+        className=" text-3xl font-bold text-black
     "
       >
         Beneficios

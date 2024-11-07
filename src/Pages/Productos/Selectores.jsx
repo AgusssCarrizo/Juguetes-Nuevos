@@ -6,10 +6,12 @@ export default function Selectores({ category }) {
   console.log(selectedCategory);
   const dispatch = useDispatch();
   return (
-    <div className="flex gap-2 flex-wrap mt-6 justify-center">
+    <div className="flex md:gap-2 flex-wrap mt-6 justify-center">
       <button
-        className={`btn-md text-gray-700 font-bolder text-[1.2rem] border-solid  rounded ${
-          category === selectedCategory ? "bg-emerald-500" : "bg-[#40e0d0]"
+        className={`w-24 md:w-48  md:h-14 text-gray-700 font-bolder text-[1.2rem] border-solid  rounded ${
+          category === selectedCategory
+            ? "bg-[#40e0d0] border-b-[3px] border-b-[#2ca89c]"
+            : "bg-[#40e0d0]"
         }`}
         onClick={(e) => dispatch(selectCategory(category))}
       >

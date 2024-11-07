@@ -12,7 +12,7 @@ export const Categories = [
   {
     id: 3,
 
-    category: "mesa",
+    category: "Mesa",
   },
   {
     id: 4,

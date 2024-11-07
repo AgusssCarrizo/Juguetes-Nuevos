@@ -7,10 +7,7 @@ export default function Productos({ juguete }) {
   const { img, title, category, price, id } = juguete;
 
   return (
-    <div
-      className="card w-64 md:w-96 h-100 bg-gray-200 shadow-xl mb-6"
-      key={id}
-    >
+    <div className="card w-72  h-84 border-2 bg-white shadow-xl mb-6" key={id}>
       <figure className="flex justify-center items-center">
         <img src={img} alt="Shoes" className="h-[200px] mt-6 rounded" />
       </figure>

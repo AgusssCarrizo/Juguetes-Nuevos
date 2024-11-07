@@ -43,12 +43,15 @@ export default function Header() {
             open ? " top-16 " : "top-[-490px]"
           } `}
         >
-          <li className=" hover:underline hover:decoration-solid  text-black hover:bg-slate-200   md:bg-[#40e0d0] items-center  ">
-            <Link to="/" className="btn-md flex justify-center items-center ">
+          <li className=" hover:underline hover:decoration-solid  text-black  md:bg-[#40e0d0] items-center  ">
+            <Link
+              to="/"
+              className="btn-md flex justify-center items-center text-black"
+            >
               Home
             </Link>
           </li>
-          <li className=" hover:underline hover:decoration-solid  text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
+          <li className=" hover:underline hover:decoration-solid  text-black md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
             <Link
               to="juguetes"
               className="btn-md flex justify-center items-center"
@@ -56,7 +59,7 @@ export default function Header() {
               Juguetes
             </Link>
           </li>
-          <li className=" hover:underline hover:decoration-solid  text-black hover:bg-slate-200 md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
+          <li className=" hover:underline hover:decoration-solid  text-black md:bg-[#40e0d0] items-center border-t border-slate-700 md:border-none">
             <Link
               to="contact"
               className="btn-md flex justify-center items-center"
